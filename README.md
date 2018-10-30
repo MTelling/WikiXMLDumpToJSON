@@ -20,6 +20,6 @@ To do this we have created a Wikipedia Splitter. This uses the Wikipedia Reader 
 The Splitter consists of three commands: `split-wiki`, `get-page`, `get-pages`.
 - The `split-wiki` command splits a Wikipedia XML file into several JSON files. 
 - The `get-page` command gets the JSON version of a single page. You must run the split wiki command first.
-- The `get-pages` command collects several pages defined in a txt file, into a single JSON file. This is useful for testing. 
+- The `get-pages` command collects several pages defined in a txt file, into a single JSON file. This file should just contain the name of each article needed alone on each line. This is useful for testing.
 
 To use any of the commands run `python src/WikiSplitter.py {command}`.
