@@ -4,6 +4,9 @@ This tool consists of two parts. A Wikipedia Reader and a Wikipedia splitter. If
 
 This has only been tested on the dump `enwiki-20170820-pages-articles-multistream.xml`. 
 
+## Install
+Run `pip install -r requirements.txt`
+
 ## Wikipedia Reader
 When downloading Wikipedia you receive about 60GB of XML data. It is impossible to keep this all in memory on most machines therefore you need to stream it. Streaming makes accessing the data a bit harder as you can't just iterate over the tree for each page. Therefore we have created a reader for the XML file, which will parse each page into a Python dictionary. This has been built with Python iterators. This means that you easily iterate over pages with the following code:
 ```python
