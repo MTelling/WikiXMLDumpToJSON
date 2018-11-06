@@ -50,7 +50,9 @@ def cli():
               help="The suffix for the splitted json files. Fx wiki_part")
 def get_page(page_title, path_to_files, file_suffix):
     index = load_json_file(os.path.join(path_to_files, INDEX_FILE_NAME))
-    return __get_page(page_title, path_to_files, file_suffix, index)
+    page = __get_page(page_title, path_to_files, file_suffix, index)
+    click.echo(page)
+    return page
 
 @click.command()
 @click.option('--pages_file', prompt="Path to requested pages file")
