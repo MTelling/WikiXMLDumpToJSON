@@ -10,8 +10,9 @@ FILE_NAME_FORMAT = "{}_{}.json"
 
 
 def write_to_json_file(obj, path, name):
-    with open(os.path.join(path, name), 'w+') as file:
-        json.dump(obj, file)
+    with open(os.path.join(path, name), 'w+', encoding='utf-8') as file:
+        text = json.dumps(obj, ensure_ascii=False)
+        file.write(text)
 
 
 def get_file_name_containing_page(page_title, index, file_suffix):
@@ -22,7 +23,7 @@ def get_file_name_containing_page(page_title, index, file_suffix):
 
 
 def load_json_file(filepath):
-    with open(filepath, 'r') as f:
+    with open(filepath, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 
